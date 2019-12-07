@@ -14,7 +14,7 @@ body {
 .wrapper {
 	margin: 0 auto 0 auto;
 	max-width: 960px;
-}	
+}
 h2 {
 	color: #3f5170;
 	font-size: 22px;
@@ -31,25 +31,8 @@ h2 {
 p {
 	line-height: 1.6;
 }
-a:link {
-	color: #d25833;
-}
-a:visited {
-	color: #d25833;
-}
-a:hover {
-	color: #e3937a;
-}
-a:active {
-	color: #fff6a3d
-}
 
 /*すべてのページに適用 - ヘッダー - */
-.logo {
-	margin: 50px 0 40px 0;
-	line-height: 0;
-	text-align: center;
-}
 .nav li {
 	display: inline;
 	list-style-type: none;
@@ -86,75 +69,4 @@ a:active {
 	padding: 80px 15px 20px 15px;
 	font-size: 12px;
 	color: #3f5170;
-}
-
-/* 個別のスタイル */
-/* index.html */
-.keyvisual {
-	margin: 15px 0 0 0;
-}
-.news-item {
-	margin: 0;
-}
-
-/* about.html */
-.shop-photo {
-	float: left;
-	padding: 0 1em 1em 0;
-}
-.clear {
-	clear: both;
-}
-/* テーブル */
-.info {
-	border-collapse: collapse;
-}
-.info th, .info td {
-	padding: 8px;
-	border: 1px solied #bec2c7;
-	text-align: left;
-}
-.info th {
-	background-color: #dde2ea;
-	width: 90px;
-	color: #3f5170;
-	vertical-align: top;
-}
-
-/* menu.html */
-.menu-item {
-	display: flex;
-	border-bottom: 1px dashed #bec2c7;
-	padding: 20px 8px;
-}
-.menu-photo {
-	margin-right: 16px;
-	flex: 1 1 auto;
-}.menu-text {
-	flex: 0 0 336px;
-}
-
-/* access.html */
-.map {
-	text-align: center;
-}
-
-/* contact.html */
-form div {
-	padding: 12px;
-	border-bottom: 1px dashed #bec2c7;
-}
-select {
-	width: 30em;
-}
-input[name="subject"] {
-	width: 30em;
-}
-textarea {
-	width: 30em;
-	height: 6em;
-}
-input[type="submit"] {
-	margin: 20px 0;
-	width: 30em;
 }
