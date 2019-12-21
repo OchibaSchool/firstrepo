@@ -2,28 +2,42 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>ログイン 　家計簿</title>
-<link rel="stylesheet" href="css/style.css">
+		<title>ログイン　家計簿</title>
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header class="header">
-		<h1 class="logo"><img src="images/osusume.png"alt="おすすめ"width="100" height="50"><img src="images/logo.png"alt="オンライン　家計簿"></h1>
-			<div>
-				ユーザーID<br>
-				<input type="text" name="subject">
+		<div class="header">
+			<div id="osusume">
+				<img src="images/osusume.png" alt="おすすめ" width="100" height="50">
 			</div>
-			<div>
-				パスワード<br>
-				<input type="password" name="subject">
-				<!-- テキストは文字打てるよって意味でsubjectは何を表してる？ -->
+			<div id="logo-img">
+				<img src="images/logo.png" alt="オンライン　家計簿">
 			</div>
-			<div>
-				
-				<input type="checkbox" name="how">次回から自動的にログイン
-			<!-- 本にはnameの後にvalueがあったけど何？？ -->
+			<h1 id="logo">
+				ちーちゃん特製家計簿アプリ星星
+			</h1>
+		</div>
+		<div class="body">
+			<div class="box-center">
+				<div class="box-inner">
+
+					ユーザーID<br>
+					<input type="text" name="subject">
+				</div>
+				<div class="box-inner">
+					パスワード<br>
+					<input type="password" name="subject">
+					<!-- テキストは文字打てるよって意味でsubjectは何を表してる？ -->
+				</div>
+				<div class="box-inner">
+					
+					<input type="checkbox" name="how">次回から自動的にログイン
+				<!-- 本にはnameの後にvalueがあったけど何？？ -->
+				</div>
+				<div class="box-inner">
+					<input type="submit" name="submit" value="送信">
+				</div>
 			</div>
-			<div>
-				<input type="submit" name="submit" value="送信">
-			</div>
+		</div>
 	</body>
 </html>
