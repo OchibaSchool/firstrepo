@@ -2,14 +2,17 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<!-- 全ページログイン　家計簿で表示？各ページに変更はできる？ -->
-		<title>家計簿メニュー</title>
-<link rel="stylesheet" href="css/style.css">
+		<title>ログイン　家計簿</title>
+	<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-<!--　オンライン家計簿だけ真ん中表示にしたい -->
-		<header class="header">
-		<h1 class="logo"><img src="images/osusume.png"alt="おすすめ"width="100" height="50"><img src="images/logo.png"alt="オンライン　家計簿"></h1>
+		<div class="header">
+			<div id="osusume">
+				<img src="images/osusume.png" alt="おすすめ" width="100" height="50">
+			</div>
+			<div id="logo-img">
+				<img src="images/logo.png" alt="オンライン　家計簿">
+			</div>
 			<nav class="nav">
 				<ul>
 					<li><a href="tyoubomenu.html">予算入力</a></li>
@@ -18,45 +21,35 @@
 			</nav>
 		</header>
 		<h2>予算入力</h2>
-		<input type="date"></input><br>
-<!-- ここにスペースを入れたかったのに入らない…>
-<!-- 現在の収支を入れる違う。。2行で収支にしたかった -->
-			<table border="1" cellspacing="0" cellpadding="0">
-			<caption>現在のお金</caption>
-				<tr>
-					<th>予算</th>
-					<th>使用</th>
-					<th>残額</th></tr>
-				<tr>
-					<td>○円</td>
-					<td>□円</td>
-					<td>△円</td>
-				</tr>
-			</table><br>
-			<table>
-			<caption>内訳</caption>
-				<tr>
-					<th>食費</th><td>●●円</td>
-				</tr>
-
-				<tr>
-					<th>日用品</th><td>●●円</td>
-				</tr>
-
-				<tr>
-					<th>交通費</th><td>●●円</td>
-				</tr>
-
-				<tr>
-					<th>水道代</th><td>●●円</td>
-				</tr>
-
-				<tr>
-					<th>光熱費</th><td>●●円</td>
-				</tr>
-
-				<tr>
-					<th>交際費</th><td>●●円</td>
-				</tr>
-	</body>
-</html>
+			<div>
+				<input type="date"></input>
+				<input type="radio" name="first" value="income" cheched>収入
+				<input type="radio" name="first" value="expense" >支出
+			</div>
+			<div>
+				<select name="kind>
+					<option value="">食費</option>
+					<option value="">外食</option>
+					<option value="">日用品</option>
+					<option value="">交際</option>
+					<option value="">お小遣い</option>
+					<option value="">服・美容</option>
+					<option value="">交通</option>
+					<option value="">車</option>
+					<option value="">本・雑誌</option>
+					<option value="">教養</option>
+					<option value="">医療</option>
+					<option value="">通信費</option>
+					<option value="">水道・光熱費</option>
+					<option value="">住まい</option>
+					<option value="">保険</option>
+					<option value="">その他</option>
+				</select>
+				<input type="text" name="memo" placeholder="メモ">
+			</div>
+			<div>
+				<input type="text" name="money" placeholder="金額">
+			</div>
+			<div>
+				<input type="submit" name="submit" value="登録">
+			</div>
