@@ -8,7 +8,9 @@ body {
 	margin: 0 0 0 0;
 	background-color: #FFFFF0;
 }
-
+.header {
+	text-align: center;
+}
 /*すべてのwebページに適用　- ヘッダー　-*/
 .logo {
 	margin: 30px 0 20px 0;
@@ -16,9 +18,7 @@ body {
 	text-align: center;
 }
 /*divに中央指定は無理？　-*/
-.div {
-	text-align: center;
-}
+
 .nav li {
 	display: inline;
 	list-style-type: none;
@@ -56,4 +56,18 @@ table td{
   width: 25%;
   padding: 10px 0;
 }
-
+/* 2ページ目の個別のスタイル */
+.hinichi {
+  width: 100%;
+}
+.sentakushi {
+  width: 101.5%;
+}
+.kingaku {
+  width: 96%;
+}
+/* 3ページ目の個別のスタイル */
+.tuki3 {
+  text-align: center;
+  width: 25%
+}
