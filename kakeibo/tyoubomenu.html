@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		<!-- ヘッダー箱にお勧め箱とロゴ箱、メニューランがある -->
 		<div class="header">
 			<div id="osusume">
 				<img src="images/osusume.png" alt="おすすめ"width="100" height="50">
@@ -20,36 +21,44 @@
 				</ul>
 			</nav>
 		</header>
+		<!-- ヘッダー箱がここで終わり -->
 		<h2>予算入力</h2>
-			<div class="hinichi">
-				<input type="date"></input>
-				<input type="radio" name="first" value="income" cheched>収入
-				<input type="radio" name="first" value="expense" >支出
+		<!-- 登録内容を大きい箱に入れる -->
+			<div class="naiyou">
+		<!-- 日にち箱でカレンダーと支出選択 -->
+				<div class="hinichi">
+					<input type="date"></input>
+					<input type="radio" name="first" value="income" cheched>収入
+					<input type="radio" name="first" value="expense" >支出
+				</div>
+		<!-- 選択肢ボックスで内容とメモ -->
+				<div class="sentakushi">
+					<select name="kind>
+						<option value="syokuhi">食費</option>
+						<option value="gaisyoku">外食</option>
+						<option value="nitiyouhin">日用品</option>
+						<option value="kousai">交際</option>
+						<option value="okozukai">お小遣い</option>
+						<option value="huku">服・美容</option>
+						<option value="koutuu">交通</option>
+						<option value="kuruma">車</option>
+						<option value="honn">本・雑誌</option>
+						<option value="kyouyou">教養</option>
+						<option value="iryou">医療</option>
+						<option value="tuusinnhi">通信費</option>
+						<option value="suidou">水道・光熱費</option>
+						<option value="sumai">住まい</option>
+						<option value="hokenn">保険</option>
+						<option value="sonota">その他</option>
+					</select>
+					<input type="text" name="memo" placeholder="メモ">
+				</div>
+	  			<!-- 金額箱に金額 -->
+				<div class="kingaku">
+					<input type="text" name="money" placeholder="金額">
+				</div><br>
 			</div>
-			<div class="sentakushi">
-				<select name="kind>
-					<option value="">食費</option>
-					<option value="">外食</option>
-					<option value="">日用品</option>
-					<option value="">交際</option>
-					<option value="">お小遣い</option>
-					<option value="">服・美容</option>
-					<option value="">交通</option>
-					<option value="">車</option>
-					<option value="">本・雑誌</option>
-					<option value="">教養</option>
-					<option value="">医療</option>
-					<option value="">通信費</option>
-					<option value="">水道・光熱費</option>
-					<option value="">住まい</option>
-					<option value="">保険</option>
-					<option value="">その他</option>
-				</select>
-				<input type="text" name="memo" placeholder="メモ">
-			</div>
-			<div class="kingaku">
-				<input type="text" name="money" placeholder="金額">
-			</div><br>
+			<!-- 登録ボタンは内容箱と別の箱 -->
 			<div class="touroku">
 				<input type="submit" name="submit" value="登録">
 			</div>

@@ -56,15 +56,11 @@ table td{
   padding: 10px 0;
 }
 /* 2ページ目の個別のスタイル */
-.hinichi {
-  width: 100%;
+.naiyou {
+  text-align: left;
+  margin: 2px 600px;
 }
-.sentakushi {
-  width: 103%;
-}
-.kingaku {
-  width: 92%;
-}
+/* 表の金額の横より右にいけない設計になってる気がする…。 */
 .rireki {
   width: 600px;  /* 幅指定 */
   height: 90px;  /* 高さ指定 */
