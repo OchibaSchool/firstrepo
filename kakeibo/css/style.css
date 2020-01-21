@@ -29,11 +29,12 @@ h2 {
 	font-size: 22px;
 	border-bottom: 3px dotted #9999FF;
 }
-table{
-  width: 70%;
+table {
   border-collapse:separate;
   border-spacing: 0;
-　text-align: center
+　text-align: center;
+  width: 1200px;  /* 幅指定 */
+  margin: auto;   /*表の外の幅指定 */
 }
 
 table th{
@@ -43,8 +44,7 @@ table th{
   border-left: 1px solid #3c6690; /* 左線の指定 1本 */
   border-top: 1px solid #3c6690;  /* 上線の指定 1本 */
   border-bottom: 1px solid #3c6690;
-  width: 25%;
-  padding: 10px 0;
+  width: auto;  /* 幅指定 */
 }
 
 table td{
@@ -52,18 +52,17 @@ table td{
   border-left: 1px solid #a8b7c5;
   border-bottom: 1px solid #a8b7c5;
   border-top:none;
-  width: 25%;
-  padding: 10px 0;
+  width: auto;  /* 幅指定 */
 }
 /* 2ページ目の個別のスタイル */
 .naiyou {
   text-align: left;
-  margin: 2px 600px;
+  margin: 2px 550px;
 }
 /* 表の金額の横より右にいけない設計になってる気がする…。 */
 .rireki {
-  width: 600px;  /* 幅指定 */
-  height: 90px;  /* 高さ指定 */
+  width: auto;  /* 幅指定 */
+  height: auto;  /* 高さ指定 */
   margin-left: auto; /* 中央寄せ */
   margin-right: auto;
 }
