@@ -21,53 +21,52 @@
 			</nav>
 		</header>
 		<h2>予算表示</h2>
-			<div><input type="month"></input><br>
-			<div>
-			<div class="pie-chart" data-px="200">
-  				<div class="pie" data-percentage="60"></div>
-				<div class="pie" data-percentage="20"></div>
-				<div class="pie" data-percentage="10"></div>
-				<div class="pie" data-percentage="10"></div>
-			</div>			
-<!-- 上のカレンダーを月別表示に変更　-->
-<!-- ここに円グラフを入れようとしたが今日は失敗により断念　-->
+		    	<div><input type="month"></input><br>
+			</div><br>
+			<table border="0">
+				<tr>
+				<td>
+					<table class="now" border="1" align="left">
+					<caption>現在のお金</caption>
+						<tr>
+							<th>予算</th>
+							<th>使用</th>
+							<th>残額</th></tr>
+						<tr>
+							<td>○円</td>
+							<td>□円</td>
+							<td>△円</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table class="utiwake" border="1">
+					<caption>内訳</caption>
+						<tr>
+							<th>食費</th><td>●●円</td>
+						</tr>
 
-			<table border="1" cellspacing="0" cellpadding="0">
-			<caption>現在のお金</caption>
-				<tr>
-					<th>予算</th>
-					<th>使用</th>
-					<th>残額</th></tr>
-				<tr>
-					<td>○円</td>
-					<td>□円</td>
-					<td>△円</td>
-				</tr>
-			</table><br>
-			<table>
-			<caption>内訳</caption>
-				<tr>
-					<th>食費</th><td>●●円</td>
-				</tr>
+						<tr>
+							<th>日用品</th><td>●●円</td>
+						</tr>
 
-				<tr>
-					<th>日用品</th><td>●●円</td>
-				</tr>
+						<tr>
+							<th>交通費</th><td>●●円</td>
+						</tr>
 
-				<tr>
-					<th>交通費</th><td>●●円</td>
-				</tr>
+						<tr>
+							<th>水道代</th><td>●●円</td>
+						</tr>
 
-				<tr>
-					<th>水道代</th><td>●●円</td>
-				</tr>
+						<tr>
+							<th>光熱費</th><td>●●円</td>
+						</tr>
 
-				<tr>
-					<th>光熱費</th><td>●●円</td>
-				</tr>
-
-				<tr>
-					<th>交際費</th><td>●●円</td>
-				</tr>
+						<tr>
+							<th>交際費</th><td>●●円</td>
+						</tr>
+			</td>
+			</tr>
+		</table>
 	</body>
 </html>

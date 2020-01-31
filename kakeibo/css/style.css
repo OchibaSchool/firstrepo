@@ -33,11 +33,10 @@ table {
   border-collapse:separate;
   border-spacing: 0;
 　text-align: center;
-  width: 1200px;  /* 幅指定 */
   margin: auto;   /*表の外の幅指定 */
 }
 
-table th{
+table th {
   text-align: center; /* 文字を中央に */
   color:white;        /* 文字を白に */
   background: linear-gradient(#829ebc,#225588);　/*１列目のグラデーション */
@@ -47,12 +46,23 @@ table th{
   width: auto;  /* 幅指定 */
 }
 
-table td{
+table td {
   text-align: center;
   border-left: 1px solid #a8b7c5;
   border-bottom: 1px solid #a8b7c5;
   border-top:none;
   width: auto;  /* 幅指定 */
+}
+
+table.kako {
+  width: 1200px;
+}
+
+table.now {
+  width: 500px;
+}
+table.utiwake {
+  width: 700px;
 }
 /* 2ページ目の個別のスタイル */
 .naiyou {
@@ -75,3 +85,5 @@ table td{
   text-align: center;
   width: 25%
 }
+.utiwake {
+  
