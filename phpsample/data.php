@@ -1,31 +1,31 @@
 <?php
 /**
- * DB‚Ö‚Ìƒf[ƒ^ƒAƒNƒZƒX‚ğ’è‹`‚·‚éƒNƒ‰ƒX
+ * DBã¸ã®ãƒ‡ãƒ¼ã‚¿ã‚¢ã‚¯ã‚»ã‚¹ã‚’å®šç¾©ã™ã‚‹ã‚¯ãƒ©ã‚¹
  */
 class Data {
-	/* ƒNƒ‰ƒX“à•Ï” */
-	// DBÚ‘±î•ñ
+	/* ã‚¯ãƒ©ã‚¹å†…å¤‰æ•° */
+	// DBæ¥ç¶šæƒ…å ±
 	private $dsn = 'pgsql:dbname=saga_dl host=localhost port=5432';
-	// DBÚ‘±ƒ†[ƒU[
+	// DBæ¥ç¶šãƒ¦ãƒ¼ã‚¶ãƒ¼
 	private $user = 'saga';
-	// DBÚ‘±ƒpƒXƒ[ƒh
+	// DBæ¥ç¶šãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 	private $password = 'xxxxxxx';
-	// DBÚ‘±ƒnƒ“ƒhƒ‰[
+	// DBæ¥ç¶šãƒãƒ³ãƒ‰ãƒ©ãƒ¼
 	private $dbh = null;
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	 */
 	public function __construct()
 	{
-		// DBÚ‘±‚ğÀs‚·‚é
+		// DBæ¥ç¶šã‚’å®Ÿè¡Œã™ã‚‹
 		$this->dbh = new PDO($this->dsn, $this->user, $this->password);
 	}
 
 	/**
-	 * ƒ_ƒEƒ“ƒ[ƒhó‹µƒrƒ…[‚ğæ“¾‚·‚é
-	 * @param $authNo ”FØƒL[
-	 * @param $ip Ú‘±Œ³IP
+	 * ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰çŠ¶æ³ãƒ“ãƒ¥ãƒ¼ã‚’å–å¾—ã™ã‚‹
+	 * @param $authNo èªè¨¼ã‚­ãƒ¼
+	 * @param $ip æ¥ç¶šå…ƒIP
 	 */
 	public function getVDlStatus($authNo,$ip){
 		$stmt = $this->dbh->prepare($this->vDlStatusSql());
@@ -37,9 +37,9 @@ class Data {
 	}
 
 	/**
-	 * ”FØƒ}ƒXƒ^‚ğæ“¾‚·‚é
-	 * @param $authNo ”FØƒL[
-	 * @param $productionId ƒRƒ“ƒeƒ“ƒcID
+	 * èªè¨¼ãƒã‚¹ã‚¿ã‚’å–å¾—ã™ã‚‹
+	 * @param $authNo èªè¨¼ã‚­ãƒ¼
+	 * @param $productionId ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ID
 	 */
 	public function getMAuth($authNo,$productionId){
 		$stmt = $this->dbh->prepare($this->mAuthSql());
@@ -51,8 +51,8 @@ class Data {
 	}
 
 	/**
-	 * ƒ_ƒEƒ“ƒ[ƒh—š—ğƒe[ƒuƒ‹‚ğæ“¾‚·‚é
-	 * @param $authNo ”FØƒL[
+	 * ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å±¥æ­´ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’å–å¾—ã™ã‚‹
+	 * @param $authNo èªè¨¼ã‚­ãƒ¼
 	 */
 	public function getTDlHistory($authNoId){
 		$stmt = $this->dbh->prepare($this->tDlHistory());
@@ -63,10 +63,10 @@ class Data {
 	}
 
 	/**
-	 * ƒ_ƒEƒ“ƒ[ƒh—š—ğƒe[ƒuƒ‹‚Éƒf[ƒ^‚ğ“o˜^‚·‚é
-	 * @param $ip Ú‘±Œ³IP
-	 * @param $authNo ”FØƒL[
-	 * @param $productionId ƒRƒ“ƒeƒ“ƒcID
+	 * ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å±¥æ­´ãƒ†ãƒ¼ãƒ–ãƒ«ã«ãƒ‡ãƒ¼ã‚¿ã‚’ç™»éŒ²ã™ã‚‹
+	 * @param $ip æ¥ç¶šå…ƒIP
+	 * @param $authNo èªè¨¼ã‚­ãƒ¼
+	 * @param $productionId ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ID
 	 */
 	public function excuteInsertHistory($ip,$authId,$productionId){
 		$insertStmt = $this->dbh->prepare($this->insertHistoryTableSql());
@@ -78,7 +78,7 @@ class Data {
 	}
 
 	/**
-	 * ƒ_ƒEƒ“ƒ[ƒhó‹µƒrƒ…[‚Ìæ“¾SQL‚ğ”­s‚·‚é
+	 * ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰çŠ¶æ³ãƒ“ãƒ¥ãƒ¼ã®å–å¾—SQLã‚’ç™ºè¡Œã™ã‚‹
 	 */
 	private function vDlStatusSql(){
 		$sql = 'select * from V_DL_STATUS where auth_no = ? and dl_ip = ?';
@@ -86,7 +86,7 @@ class Data {
 	}
 
 	/**
-	 * ”FØƒ}ƒXƒ^‚Ìæ“¾SQL‚ğ”­s‚·‚é
+	 * èªè¨¼ãƒã‚¹ã‚¿ã®å–å¾—SQLã‚’ç™ºè¡Œã™ã‚‹
 	 */
 	private function mAuthSql(){
 		$sql = 'select * from m_dl_auth where auth_no = ? and auth_production_id = ?';
@@ -94,7 +94,7 @@ class Data {
 	}
 
 	/**
-	 * ƒ_ƒEƒ“ƒ[ƒh—š—ğƒe[ƒuƒ‹‚Ì“o˜^SQL‚ğ”­s‚·‚é
+	 * ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å±¥æ­´ãƒ†ãƒ¼ãƒ–ãƒ«ã®ç™»éŒ²SQLã‚’ç™ºè¡Œã™ã‚‹
 	 */
 	private function insertHistoryTableSql(){
 		$insertSQL = 'insert into T_DL_HISTORY '
@@ -118,7 +118,7 @@ class Data {
 	}
 
 	/**
-	 * ƒ_ƒEƒ“ƒ[ƒh—š—ğƒe[ƒuƒ‹‚Ìæ“¾SQL‚ğ”­s‚·‚é
+	 * ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å±¥æ­´ãƒ†ãƒ¼ãƒ–ãƒ«ã®å–å¾—SQLã‚’ç™ºè¡Œã™ã‚‹
 	 */
 	private function tDlHistory(){
 		$sql = "select * from t_dl_history where delete_flg = '0' and history_auth_id = ?";
